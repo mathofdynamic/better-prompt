@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Prompt - AI Prompt Enhancement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Better Prompt</h1>
+            <p class="subtitle">Enhance your AI prompts with intelligent suggestions</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="promptInput" 
+                        class="prompt-input" 
+                        placeholder="Type your prompt here... (English or Farsi)"
+                        rows="6"
+                    ></textarea>
+                    <div class="input-overlay" id="inputOverlay"></div>
+                </div>
+            </div>
+
+            <div class="suggestion-tooltip" id="suggestionTooltip">
+                <div class="tooltip-content">
+                    <div class="tooltip-header">
+                        <span class="tooltip-title">Suggestions</span>
+                        <button class="close-tooltip" id="closeTooltip">&times;</button>
+                    </div>
+                    <div class="suggestions-list" id="suggestionsList"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="debug-info">
+                <span class="request-counter">
+                    Requests sent: <span id="requestCounter">0</span>
+                </span>
+                <span class="status-indicator" id="statusIndicator">Ready</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="config.runtime.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
